@@ -8,7 +8,7 @@
       <p><b>地址：上海市华东理工大学奉贤校区，上海市奉贤区海思路999号</b></p>
     </td>
     <td width="25%">
-      <img src="/zhengjianzhao.jpg" width="100%">      % 插入证件照代码
+      <img src="/zhengjianzhao.jpg" width="100%">      
     </td>
   </tr>
 </table>

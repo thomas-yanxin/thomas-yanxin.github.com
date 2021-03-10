@@ -1,43 +1,195 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <title></title>
-<style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></head>
-<body marginheight="0"><div>
-<table border="0">
-  <tbody><tr>
-    <td width="75%">
-      <h1>颜鑫</h1>
-      <p><b>本科大二在读</b></p>
-      <p><b>华东理工大学信息学院</b></p>
-      <p><b>邮箱：yx20001210@163.com</b></p>
-      <p><b>地址：上海市奉贤区海思路999号华东理工大学奉贤校区</b></p>
-      <p><a href="/index-en.html">English Version</a></p>
+<html>
+    <head>
+        <title>xxxx</title>
+        <div style="float:right;" id="hub_iframe"></div>
+        <script type="text/javascript">
+        ! function() {
+	//封装方法，压缩之后减少文件大小
+	function get_attribute(node, attr, default_value) {
+		return node.getAttribute(attr) || default_value;
+	}
+	//封装方法，压缩之后减少文件大小
+	function get_by_tagname(name) {
+		return document.getElementsByTagName(name);
+	}
+	//获取配置参数
+	function get_config_option() {
+		var scripts = get_by_tagname("script"),
+			script_len = scripts.length,
+			script = scripts[script_len - 1]; //当前加载的script
+		return {
+			l: script_len, //长度，用于生成id用
+			z: get_attribute(script, "zIndex", -1), //z-index
+			o: get_attribute(script, "opacity", 0.5), //opacity
+			c: get_attribute(script, "color", "0,0,0"), //color
+			n: get_attribute(script, "count", 99) //count
+		};
+	}
+	//设置canvas的高宽
+	function set_canvas_size() {
+		canvas_width = the_canvas.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, 
+		canvas_height = the_canvas.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+	}
+
+	//绘制过程
+	function draw_canvas() {
+		context.clearRect(0, 0, canvas_width, canvas_height);
+		//随机的线条和当前位置联合数组
+		var e, i, d, x_dist, y_dist, dist; //临时节点
+		//遍历处理每一个点
+		random_lines.forEach(function(r, idx) {
+			r.x += r.xa, 
+			r.y += r.ya, //移动
+			r.xa *= r.x > canvas_width || r.x < 0 ? -1 : 1, 
+			r.ya *= r.y > canvas_height || r.y < 0 ? -1 : 1, //碰到边界，反向反弹
+			context.fillRect(r.x - 0.5, r.y - 0.5, 1, 1); //绘制一个宽高为1的点
+			//从下一个点开始
+			for (i = idx + 1; i < all_array.length; i++) {
+				e = all_array[i];
+				//不是当前点
+				if (null !== e.x && null !== e.y) {
+						x_dist = r.x - e.x, //x轴距离 l
+						y_dist = r.y - e.y, //y轴距离 n
+						dist = x_dist * x_dist + y_dist * y_dist; //总距离, m
+					dist < e.max && (e === current_point && dist >= e.max / 2 && (r.x -= 0.03 * x_dist, r.y -= 0.03 * y_dist), //靠近的时候加速
+						d = (e.max - dist) / e.max, 
+						context.beginPath(), 
+						context.lineWidth = d / 2, 
+						context.strokeStyle = "rgba(" + config.c + "," + (d + 0.2) + ")", 
+						context.moveTo(r.x, r.y), 
+						context.lineTo(e.x, e.y), 
+						context.stroke());
+				}
+			}
+		}), frame_func(draw_canvas);
+	}
+	//创建画布，并添加到body中
+	var the_canvas = document.createElement("canvas"), //画布
+		config = get_config_option(), //配置
+		canvas_id = "c_n" + config.l, //canvas id
+		context = the_canvas.getContext("2d"), canvas_width, canvas_height, 
+		frame_func = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(func) {
+			window.setTimeout(func, 1000 / 45);
+		}, random = Math.random, 
+		current_point = {
+			x: null, //当前鼠标x
+			y: null, //当前鼠标y
+			max: 20000
+		},
+		all_array;
+	the_canvas.id = canvas_id;
+	the_canvas.style.cssText = "position:fixed;top:0;left:0;z-index:" + config.z + ";opacity:" + config.o;
+	get_by_tagname("body")[0].appendChild(the_canvas);
+	//初始化画布大小
+
+	set_canvas_size(), window.onresize = set_canvas_size;
+	//当时鼠标位置存储，离开的时候，释放当前位置信息
+	window.onmousemove = function(e) {
+		e = e || window.event, current_point.x = e.clientX, current_point.y = e.clientY;
+	}, window.onmouseout = function() {
+		current_point.x = null, current_point.y = null;
+	};
+	//随机生成config.n条线位置信息
+	for (var random_lines = [], i = 0; config.n > i; i++) {
+		var x = random() * canvas_width, //随机位置
+			y = random() * canvas_height,
+			xa = 2 * random() - 1, //随机运动方向
+			ya = 2 * random() - 1;
+		random_lines.push({
+			x: x,
+			y: y,
+			xa: xa,
+			ya: ya,
+			max: 6000 //沾附距离
+		});
+	}
+	all_array = random_lines.concat([current_point]);
+	//0.1秒后绘制
+	setTimeout(function() {
+		draw_canvas();
+	}, 100);
+}();
+</script>
+
+        <script type="text/javascript">
+            function async_load() {
+                   
+                i.scrolling = "no";
+                i.frameborder = "0";
+                i.border = "0";
+                i.setAttribute("frameborder", "0", 0);
+                i.width = "100px";
+                i.height = "20px";
+                document.getElementById("hub_iframe").appendChild(i);
+            }
+        
+            if (window.addEventListener) {window.addEventListener("load", async_load, false);}
+            else if (window.attachEvent) {window.attachEvent("onload", async_load);}
+            else {window.onload = async_load;}
+        </script>
+    </head>
+<body>      
+<table border="1" align="center" cellpadding="10" width="80%">
+<tr>
+    <th colspan="7" bgcolor="BurlyWood" >我的个人简介</th>
+</tr>
+ 
+<tr>
+    <th bgcolor="BurlyWood">姓名:</th>
+    <td>xxxx</td>
+    <th bgcolor="BurlyWood">年龄:</th>
+    <td>xxxx</td>
+    <th bgcolor="BurlyWood">民族:</th>
+    <td>xxxx</td>
+    <td rowspan="3" width="100"<p><a href="https://baike.baidu.com/item/%E7%8E%8B%E5%86%B0%E5%86%B0/53823440?fr=aladdin"><img border="0" src="https://bkimg.cdn.bcebos.com/pic/8718367adab44aed2e73aab266569001a18b87d64d18?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UxMTY=,g_7,xp_5,yp_5/format,f_auto">
+</a></p></td>
+</tr>
+ 
+<tr>
+    <th bgcolor="BurlyWood">出生日期:</th>
+    <td>xxxx</td>
+    <th bgcolor="BurlyWood">政治面貌:</th>
+    <td>xxxx</td>
+    <th bgcolor="BurlyWood">学历:</th>
+    <td>xxxx</td>
+</tr>
+ 
+<tr>
+    <th bgcolor="BurlyWood">专业:</th>
+    <td>xxxx</td>
+    <th bgcolor="BurlyWood">毕业学校:</th>
+    <td>xxxx</td>
+    <th bgcolor="BurlyWood">邮编:</th>
+    <td>xxxx</td>
+</tr>
+ 
+<tr>
+     <th bgcolor="BurlyWood">爱好:</th>
+     <td>xxxx</td>
+     <th bgcolor="BurlyWood">籍贯:</th>
+     <td>xxxx</td>
+     <th bgcolor="BurlyWood">邮箱:</th>
+     <td colspan="2"<p><a  href="mailto:xxxx@qq.com?subject=Hello%20again">xxxx@qq.com </a></p></td>
+</tr>
+ 
+<tr>
+     <th height="160" bgcolor="BurlyWood">个人特长:</th>
+     <td colspan="6">
+   <p>xxxx</p>
     </td>
-    <td width="25%">
-      <img src="/zhengjianzhao.jpg" width="100%">
-    </td>
-  </tr>
-</tbody></table>
-</div>
-
-<hr>
-<p>颜鑫，男，华东理工大学信息科学与工程学院自动化专业大二在读。
-
-</p>
-<hr>
-<h3>最新消息</h3>
-
-<h3>研究方向</h3>
-<ul>
-<li>多智能体协同控制系统</li>
-<li>计算机视觉</li>
-</ul>
-<h3>荣誉奖励</h3>
-    
-<h3>项目研究</h3>
-<h4>华东理工大学信息科学与工程学院自动化专业（2013.9~2017.6）</h4>
-<ul>
-<li><strong>多智能体协同控制系统</strong><br>探究多智能体在不确定性环境下的协同控制系统，包括协同控制、路径规划以及任务分配。</li>
-<li><strong>垃圾分类识别系统</strong><br>试图构建个人、垃圾桶及政府三合一的垃圾分类识别系统，助力垃圾分类识别政策的落地实现。</li>
-</ul>
-</body></html>
+</tr>
+ 
+<tr>
+     <th height="160" bgcolor="BurlyWood"> 自我介绍:</th>
+     <td colspan="6">
+    <p>xxxx</p>
+</tr>
+ 
+<tr>
+     <th height="160" bgcolor="BurlyWood">总结:</th>
+     <td colspan="6">
+    <p>xxxx</p>
+</tr>
+</table> 
+</body>
+</html>

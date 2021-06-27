@@ -4,7 +4,7 @@
 
 <h3>个人介绍</h3>
 <ul>
-<li><strong>能熟练使用Python和Matlab，熟悉C，有良好的代码风格，注重代码质量。</strong>
+<li><strong>熟练使用Python和Matlab，熟悉C，有良好的代码风格，注重代码质量。</strong>
   </li></ul>
   <ul>
 <li><strong>具备良好的代码编程习惯及文档编写能力，参与”慧眼识垃圾“、”学分比对系统“等 项目的核心部分代码编 写，重构和维护。能进行技术攻关，突破关键技术瓶颈。</strong>

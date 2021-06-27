@@ -41,12 +41,12 @@
 #   </tr>
 # </tbody></table>
 
-  - name: 个人介绍</h3>
-    能熟练使用Python和Matlab，熟悉C，有良好的代码风格，注重代码质量。</strong>
+  - name: 个人介绍
+    desc: 能熟练使用Python和Matlab，熟悉C，有良好的代码风格，注重代码质量。</strong>
  
-    具备良好的代码编程习惯及文档编写能力，参与”慧眼识垃圾“、”学分比对系统“等 项目的核心部分代码编 写，重构和维护。能进行技术攻关，突破关键技术瓶颈。</strong>
+    desc: 具备良好的代码编程习惯及文档编写能力，参与”慧眼识垃圾“、”学分比对系统“等 项目的核心部分代码编 写，重构和维护。能进行技术攻关，突破关键技术瓶颈。</strong>
 
-    掌握 Django 等开源框架设计原理及运行机制，精通 MySQL 应用开发。</strong>
+    desc: 掌握 Django 等开源框架设计原理及运行机制，精通 MySQL 应用开发。</strong>
 #   </li></ul>
 #   <ul>
 # <li><strong>掌握深度学习技术（PaddlePaddle），开源多个基于PaddlePaddle的社会治理工具。</strong>

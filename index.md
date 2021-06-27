@@ -1,18 +1,10 @@
 
 
-  </li></ul>
+
   <ul>
 <li><strong>掌握深度学习技术（PaddlePaddle），开源多个基于PaddlePaddle的社会治理工具。</strong>
   </li></ul>
-  <ul>
-<li><strong>动手能力强，对算法有极大热情，具备良好的文献学习能力，能对算法进行实现和持续优化。</strong>
-  </li></ul>
-  <ul>
-<li><strong>善于与人沟通，良好的团队合作精神和高度的责任感，能够承受压力，有较强的吃苦耐劳和创新精神。</strong>
-  </li></ul>
-  <ul>
-<li><strong>能够熟练使用Office、PS、PR等办公软件，适应自媒体运营的各项要求。拥有自己的微信公众号、知乎、 CSDN、抖音等自媒体平台，具有丰富的自媒体运营经验。</strong>
-  </li></ul>
+
 <h3>个人介绍</h3>
 <ul>
 <li><strong>能熟练使用Python和Matlab，熟悉C，有良好的代码风格，注重代码质量。</strong>

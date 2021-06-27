@@ -15,7 +15,7 @@
   </tr>
 </tbody></table>
 
-</p>
+
 <h3>个人介绍</h3>
 <ul>
 <li><strong>能熟练使用Python和Matlab，熟悉C，有良好的代码风格，注重代码质量。</strong>

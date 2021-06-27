@@ -1,9 +1,6 @@
 
 
 
-  <ul>
-<li><strong>掌握深度学习技术（PaddlePaddle），开源多个基于PaddlePaddle的社会治理工具。</strong>
-  </li></ul>
 
 <h3>个人介绍</h3>
 <ul>

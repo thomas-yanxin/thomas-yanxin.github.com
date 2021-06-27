@@ -1,10 +1,11 @@
-﻿---
+---
 layout: post
 title: "一个垃圾分类项目带你玩转飞桨（1）"
 date: 2021-06-37 02:36:26 +0800
 tags:
-	- paddlepaddle
+     - paddlepaddle
 ---	
+
 # 一个垃圾分类项目带你玩转飞桨（1）
 
 - 基于PaddleClas实现垃圾分类，导出inference模型并利用PaddleHub Serving进行服务化部署。

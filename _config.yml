@@ -1,1 +1,36 @@
-theme: jekyll-theme-cayman
+# Site settings
+title: thomas-yanxin
+description: 'Business Card Page'
+url: 'https://thomas-yanxin.github.io/'
+baseurl: ''
+profilepic: '/images/yanxin.jpg'
+bkimage: '/images/bk1.jpg'
+google_analytics: UA-XXXXXX-X
+font_awesome: 'XXXXXXXXXX.js'
+
+author:
+  name: 'thomas-yanxin'
+  email: yx20001210@163.com
+  twitter_username: Thomas_yan
+  facebook_username: Thomas yan
+  github_username:  thomas-yanxin
+  
+  
+
+# Build settings
+destination: _site
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+#plugins: ['jekyll-paginate']
+exclude: ['README.md', 'screenshot-overview.png']

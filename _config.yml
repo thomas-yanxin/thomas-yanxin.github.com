@@ -2,11 +2,11 @@
 title: thomas-yanxin
 description: 'Business Card Page'
 url: 'https://thomas-yanxin.github.io/'
-baseurl: ''
+baseurl: 'https://github.com/thomas-yanxin/thomas-yanxin.github.com'
 profilepic: '/images/yanxin.jpg'
 bkimage: '/images/bk1.jpg'
 google_analytics: UA-XXXXXX-X
-font_awesome: 'XXXXXXXXXX.js'
+font_awesome: 'https://use.fontawesome.com/releases/v5.6.3/js/all.js'
 
 author:
   name: 'thomas-yanxin'

@@ -6,7 +6,7 @@ baseurl: 'https://github.com/thomas-yanxin/thomas-yanxin.github.com'
 profilepic: '/images/yanxin.jpg'
 bkimage: '/images/bk1.jpg'
 google_analytics: UA-XXXXXX-X
-font_awesome: 'https://use.fontawesome.com/releases/v5.6.3/js/all.js'
+font_awesome: 'xxxxxx.js'
 
 author:
   name: 'thomas-yanxin'

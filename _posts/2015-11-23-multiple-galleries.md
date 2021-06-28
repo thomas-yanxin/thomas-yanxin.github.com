@@ -10,7 +10,6 @@ tags: [tag-name-one, tag-name-two]
 category: [cat03]
 comments: true
 share: true
-
 ---
 
 - 基于PaddleClas实现垃圾分类，导出inference模型并利用PaddleHub Serving进行服务化部署。

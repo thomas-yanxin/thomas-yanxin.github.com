@@ -4,6 +4,7 @@ description: A Card about thomas-yanxin
 
 # Files
 baseurl: https://github.com/thomas-yanxin/thomas-yanxin.github.com
+root_url: https://github.com/thomas-yanxin/thomas-yanxin.github.com
 pagesdir: pages
 assets:
   libs: assets/libs

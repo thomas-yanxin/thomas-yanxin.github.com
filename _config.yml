@@ -6,7 +6,7 @@ baseurl: ''
 profilepic: '/images/yanxin.jpg'
 bkimage: '/images/bk2.jpg'
 google_analytics: UA-XXXXXX-X
-font_awesome: 'XXXXXXXXXX.js'
+font_awesome: '/fontawesome/js/fontawesome.js'
 
 author:
   name: 'thomas-yanxin'

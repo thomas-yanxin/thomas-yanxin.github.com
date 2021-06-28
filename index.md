@@ -7,7 +7,6 @@
       <p><b>华东理工大学信息学院</b></p>
       <p><b>邮箱：yx20001210@163.com</b></p>
       <p><b>地址：上海市奉贤区海思路999号华东理工大学奉贤校区</b></p>
-      <p><a href="/index-en.html">English Version</a></p>
     </td>
     <td width="25%">
       <img src="/zhengjianzhao.jpg" width="100%">

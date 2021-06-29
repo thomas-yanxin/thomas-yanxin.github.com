@@ -1,4 +1,4 @@
-﻿---
+---
 layout: "writing_by_category"
 category: "living"
 permalink: "/writing/category/living/"

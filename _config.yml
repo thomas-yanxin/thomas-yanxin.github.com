@@ -1,18 +1,17 @@
 # Site settings
-title: "thomas-yanxin"
-description: A Card about thomas-yanxin
+title: "MADness"
+description: A Template for Jekyll
 
 # Files
-baseurl: https://github.com/thomas-yanxin/thomas-yanxin.github.com
-root_url: https://github.com/thomas-yanxin/thomas-yanxin.github.com
+baseurl:
 pagesdir: pages
 assets:
   libs: assets/libs
   owner: assets/owner
 logo: logo.png
-discus_shortname: yanxin
-email: yx20001210@163.com
-url: "https://thomas-yanxin.github.io"
+discus_shortname: MADness
+email: mad@ness.com
+url: "http://madforjekyll.github.io"
 search: true
 share: true
 comments: true
@@ -25,19 +24,19 @@ wpm: 200
 
 # Owner/author information
 owner:
-  name:   thomas-yanxin
+  name:   MADness
   avatar: avatar.jpg
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    A Card about thomas-yanxin
+  description:    MAD for Jekyll
 
 # Social networking links used in footer. Update and remove as you like.
-twitter_username: Thomas_yan
-facebook_username: Thomas Yan
-github_username: thomas-yanxin
-# deviantart_username: MAD4Jekyll
-# 500px_username: MAD4Jekyll
-# flickr_username: MAD4Jekyll
-instagram_username: 4245thomas
+twitter_username: MAD4Jekyll
+facebook_username: MAD4Jekyll
+github_username: MAD4Jekyll
+deviantart_username: MAD4Jekyll
+500px_username: MAD4Jekyll
+flickr_username: MAD4Jekyll
+instagram_username: MAD4Jekyll
 
  
 # Internal nav
@@ -86,4 +85,4 @@ slugify: "pretty"
 google_analytics:   UA-xxxxxxxx-x
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:   

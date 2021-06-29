@@ -1,4 +1,18 @@
-﻿# 效果预览
+---
+layout:     post
+title:      "『森林火灾检测』基于PaddleX实现森林火灾检测"
+subtitle:   "使用Paddle作为开发套件，实现森林火灾检测"
+date:       2021-06-27 12:00:00
+author:     "thomas-yanxin"
+header-img: "assets/owner/blog/header/post-bg-01.jpg"
+thumbnail: /assets/owner/blog/thumbs/thumb01.png
+tags: [technology]
+category: [technology]
+comments: true
+share: true
+---
+
+# 效果预览
 [B站链接](https://www.bilibili.com/video/BV1F44y1k7Cy/)
 [AIStudio链接](https://aistudio.baidu.com/aistudio/projectdetail/1968964)
 <iframe src="//player.bilibili.com/player.html?aid=973331916&bvid=BV1F44y1k7Cy&cid=346319759&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -246,6 +260,5 @@ while cap.isOpened():
 cap.release()
 ```
 
-请点击[此处](https://ai.baidu.com/docs#/AIStudio_Project_Notebook/a38e5576)查看本环境基本用法.  <br>
-Please click [here ](https://ai.baidu.com/docs#/AIStudio_Project_Notebook/a38e5576) for more detailed instructions. 
+
 

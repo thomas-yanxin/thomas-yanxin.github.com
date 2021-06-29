@@ -6,8 +6,8 @@ date:       2021-06-27 12:00:00
 author:     "thomas-yanxin"
 header-img: "assets/owner/blog/header/post-bg-01.jpg"
 thumbnail: /assets/owner/blog/thumbs/thumb01.png
-tags: [tag-name-one, tag-name-two]
-category: [cat03]
+tags: [technology]
+category: [technology]
 comments: true
 share: true
 ---

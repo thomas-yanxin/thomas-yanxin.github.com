@@ -15,7 +15,7 @@ share: true
 # 效果预览
 [B站链接](https://www.bilibili.com/video/BV1F44y1k7Cy/)
 [AIStudio链接](https://aistudio.baidu.com/aistudio/projectdetail/1968964)
-<iframe src="//player.bilibili.com/player.html?aid=973331916&bvid=BV1F44y1k7Cy&cid=346319759&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 # 项目背景
 <font face="楷体" size=3>&emsp;&emsp;2019年3月30日17时 ，凉山州木里县境内发生森林火灾，30名扑火人员牺牲。

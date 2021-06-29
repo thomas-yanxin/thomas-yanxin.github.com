@@ -1,4 +1,4 @@
-﻿---
+---
 layout: "writing_by_category"
 category: "studying"
 permalink: "/writing/category/studying/"

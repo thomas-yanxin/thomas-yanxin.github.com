@@ -1,7 +1,7 @@
 ---
 layout: "writing_by_category"
-category: "cat01"
-permalink: "/writing/category/cat01/"
+category: "technology"
+permalink: "/writing/category/technology/"
 header-img: "assets/owner/hero/archive-bg.jpg"
 ---
 

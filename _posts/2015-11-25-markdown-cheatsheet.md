@@ -6,7 +6,7 @@ date:       2015-11-25 12:00:00
 author:     "MADness"
 header-img: "assets/owner/blog/header/post-bg-02.jpg"
 thumbnail: /assets/owner/blog/thumbs/thumb02.png
-tags: [tag-name-one, tag-name-two]
+tags: [technology]
 categories: [technology]
 ---
 
